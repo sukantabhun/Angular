@@ -1,0 +1,45 @@
+<p>users works!</p>
+<div class="d-flex flex-column gap-4">
+  <button class="btn btn-primary" (click)="onClickCategoriesBtn()">
+    Click to go to category
+  </button>
+
+  <button
+    class="btn btn-primary"
+    (click)="onClickCategoriesBtnToSpecificUser()"
+  >
+    Click to go to 1 Suk
+  </button>
+</div>
+
+<div>
+  <ul class="nav">
+    <li class="nav-item">
+      <a
+        [routerLink]="['/users', 1, 'suk']"
+        [queryParams]="{ page: 1, search: 'Suk' }"
+        [queryParamsHandling]="'preserve'"
+        class="nav-link"
+        >go to user Suk</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLink]="['/users', 1, 'abc']"
+        [queryParams]="{ page: 2, search: 'abc' }"
+        class="nav-link"
+        >go to user abc</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        [routerLink]="['/users', 1, 'def']"
+        [queryParams]="{ page: 3, search: 'def' }"
+        class="nav-link"
+        >go to user def</a
+      >
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

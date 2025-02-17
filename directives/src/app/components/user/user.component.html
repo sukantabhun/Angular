@@ -1,0 +1,16 @@
+<p>user works!</p>
+
+<highlightText>This is a custome directive</highlightText>
+
+<p appRendererHighlight>This is renderer directive</p>
+
+<button class="btn btn-primary" (click)="onClickButton()">
+  Change the structural Directive
+</button>
+<p *appAlternateIf="isAvailable">Structural Directive</p>
+
+<div [ngSwitch]="isAlpha">
+  <p *ngSwitchCase="true">hi</p>
+  <p *ngSwitchCase="false">bye</p>
+  <p *ngSwitchDefault>error</p>
+</div>
